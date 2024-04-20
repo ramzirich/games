@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Orientation from "react-native-orientation-locker";
 
 const LandingPage = ({navigation}) =>{
@@ -13,7 +13,8 @@ const LandingPage = ({navigation}) =>{
     return(
         <View style={styles.bigContainer}>
             <View style={styles.row}>
-                <View>
+
+                <View  style={styles.columnXCenter}>
                     <TouchableOpacity style={styles.sqare} 
                         onPress={() =>navigation.navigate("intruction",
                             {
@@ -22,13 +23,14 @@ const LandingPage = ({navigation}) =>{
                             }) 
                         }
                     >
+                    <Image source={require('../../assets/images/game1.jpeg')} style={styles.img}/>
                     </TouchableOpacity>
                     <Text style={styles.text}>
-                        Mini Game 1
+                        Visual Object Learning Task
                     </Text>
                 </View>
 
-                <View>
+                <View style={styles.columnXCenter}>
                     <TouchableOpacity style={styles.sqare} 
                         onPress={() =>navigation.navigate("intruction",
                             {
@@ -37,15 +39,16 @@ const LandingPage = ({navigation}) =>{
                             }) 
                         }
                     >
+                    <Image source={require('../../assets/images/game2.jpeg')} style={styles.img}/>
                     </TouchableOpacity>
                     <Text style={styles.text}>
-                        Mini Game 2
+                        Abstract Matching
                     </Text>
                 </View>      
             </View>
 
             <View style={styles.row}>
-                <View>
+                <View style={styles.columnXCenter}>
                     <TouchableOpacity style={styles.sqare} 
                         onPress={() =>navigation.navigate("intruction",
                             {
@@ -54,13 +57,14 @@ const LandingPage = ({navigation}) =>{
                             }) 
                         }
                     >
+                    <Image source={require('../../assets/images/game3.jpeg')} style={styles.img}/>
                     </TouchableOpacity>
                     <Text style={styles.text} >
-                        Mini Game 3
+                    Digital Symbol Substitution Task
                     </Text>
                 </View>
 
-                <View>
+                <View style={styles.columnXCenter}>
                     <TouchableOpacity style={styles.sqare} 
                         onPress={() =>navigation.navigate("intruction",
                             {
@@ -69,9 +73,10 @@ const LandingPage = ({navigation}) =>{
                             }) 
                         }
                     >
+                    <Image source={require('../../assets/images/game4.jpeg')} style={styles.img}/>
                     </TouchableOpacity>
                     <Text style={styles.text}>
-                        Mini Game 4
+                    Go No Go Test
                     </Text>
                 </View>      
             </View>
@@ -82,23 +87,34 @@ const LandingPage = ({navigation}) =>{
 const styles= StyleSheet.create({
     bigContainer:{
         flex:1,
-        paddingVertical:'5%',
-        paddingHorizontal:'20%',
+        paddingVertical:'2%',
+        paddingHorizontal:'10%',
         flexDirection:'column',
-        justifyContent:'space-between'
+        justifyContent:'space-between',
+        backgroundColor:'white',
     },
     row:{
+        width:'100%',
         flexDirection:'row',
-        justifyContent:'space-between'
+        justifyContent:'space-between',
+    },
+    columnXCenter:{
+        flexDirection:'column',
+        justifyContent:'center',
+        alignItems:'center'
     },
     sqare:{
         height:100,
         width:100,
-        backgroundColor:'blue'
+        backgroundColor:'blue',
     },
     text:{
         fontSize:18,
         marginTop:2
+    },
+    img:{
+        height:'100%',
+        width:'100%'
     }
 })
 
