@@ -29,7 +29,14 @@ const LandingPage = ({navigation}) =>{
                 </View>
 
                 <View>
-                    <TouchableOpacity style={styles.sqare} onPress={() =>navigation.navigate("game2")}>
+                    <TouchableOpacity style={styles.sqare} 
+                        onPress={() =>navigation.navigate("intruction",
+                            {
+                                text: "Choose the pair of shapes that best fits with the single shape.",
+                                url: "game2"
+                            }) 
+                        }
+                    >
                     </TouchableOpacity>
                     <Text style={styles.text}>
                         Mini Game 2
@@ -39,7 +46,14 @@ const LandingPage = ({navigation}) =>{
 
             <View style={styles.row}>
                 <View>
-                    <TouchableOpacity style={styles.sqare} onPress={() =>navigation.navigate("game3")}>
+                    <TouchableOpacity style={styles.sqare} 
+                        onPress={() =>navigation.navigate("intruction",
+                            {
+                                text: "Tap the number that matches the symbol in the box.",
+                                url: "game3"
+                            }) 
+                        }
+                    >
                     </TouchableOpacity>
                     <Text style={styles.text} >
                         Mini Game 3
@@ -47,7 +61,14 @@ const LandingPage = ({navigation}) =>{
                 </View>
 
                 <View>
-                    <TouchableOpacity style={styles.sqare} onPress={() =>navigation.navigate("game4")}>
+                    <TouchableOpacity style={styles.sqare} 
+                        onPress={() =>navigation.navigate("intruction",
+                            {
+                                text: "Tap the screen with two fingers when you see one dot. Do NOT tap the screen when you see two dots.",
+                                url: "game4"
+                            }) 
+                        }
+                    >
                     </TouchableOpacity>
                     <Text style={styles.text}>
                         Mini Game 4

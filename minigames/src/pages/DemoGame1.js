@@ -10,20 +10,6 @@ const DemoGame1 = ({navigation}) =>{
     const [imgCount, setImageCount] = useState(0);
     const [listIndex, setListIndex] = useState([]);
     const [showInstructions, setShowInstructions] = useState(false);
-    // const listIndex = []
-    // listIndex.push(shapeIndex)
-
-    console.log(listIndex.length)
-    console.log('ind',shapeIndex)
-    // useEffect(() => {
-    //     // console.log(listIndex.length)
-    //      if(listIndex.length<4){
-    //         const interval = setInterval(() =>{
-    //             const newIndex = Math.floor(Math.random() * euclideans.length);
-    //             setShapeIndex(newIndex);
-    //         }, 2000)
-    //     }  
-    // }, [])
 
     useEffect(() => {
         let intervalId;
@@ -60,8 +46,7 @@ const DemoGame1 = ({navigation}) =>{
                 listIndex.length>=4 &&
                 <InstructionsDemo1 url={'game1'} navigation={navigation}
                 listIndex={listIndex}/>
-            }
-            
+            }           
         </>
     )
 }
