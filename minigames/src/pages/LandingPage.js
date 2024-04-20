@@ -14,7 +14,14 @@ const LandingPage = ({navigation}) =>{
         <View style={styles.bigContainer}>
             <View style={styles.row}>
                 <View>
-                    <TouchableOpacity style={styles.sqare}>
+                    <TouchableOpacity style={styles.sqare} 
+                        onPress={() =>navigation.navigate("intruction",
+                            {
+                                text: "You will be shown 3 different shaded shapes, one at a time. Do your best to remember each entire shape.",
+                                url: "demo1"
+                            }) 
+                        }
+                    >
                     </TouchableOpacity>
                     <Text style={styles.text}>
                         Mini Game 1
