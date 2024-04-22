@@ -68,7 +68,7 @@ const LandingPage = ({navigation}) =>{
                     <TouchableOpacity style={styles.sqare} 
                         onPress={() =>navigation.navigate("intruction",
                             {
-                                text: "Tap the screen with two fingers when you see one dot. Do NOT tap the screen when you see two dots.",
+                                text: "Tap the screen with two fingers when you see one dot. Do NOT tap the screen when you see two dots. Use left hand.",
                                 url: "game4"
                             }) 
                         }
@@ -76,7 +76,7 @@ const LandingPage = ({navigation}) =>{
                     <Image source={require('../../assets/images/game4.jpeg')} style={styles.img}/>
                     </TouchableOpacity>
                     <Text style={styles.text}>
-                    Go No Go Test
+                        Go No Go Test
                     </Text>
                 </View>      
             </View>

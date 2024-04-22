@@ -4,7 +4,7 @@ import  Orientation from 'react-native-orientation-locker';
 import Score from './Score';
 import ScoreMiniGame4 from './ScoreMiniGame4';
 
-const MiniGame4 = ({navigation}) =>{
+const MiniGame4Right = ({navigation}) =>{
   const [progress] = useState(new Animated.Value(1));
   const [showText, setShowText] = useState(false);
   const [showOneBall, setShowOneBall] = useState(0); 
@@ -80,7 +80,6 @@ const MiniGame4 = ({navigation}) =>{
                     })}]} 
                 />
             </View>
-      {/* {showText && <Text >Progress reached 0!</Text>} */}
       <Text>{showScore}</Text>
       {showOneBall ==1 &&
         <View style={styles.circleContainer}>
@@ -117,7 +116,7 @@ const MiniGame4 = ({navigation}) =>{
         }
         
         {showScore &&
-            <ScoreMiniGame4 navigation={navigation} score={score}/>
+            <Score navigation={navigation} score={score}/>
         }
     </>
     
@@ -162,40 +161,4 @@ const styles= StyleSheet.create({
   }
 })
 
-export default MiniGame4;
-
- // const handlePress = (event:any) => {
-  //   const { locationX } = event.nativeEvent;
-  //   console.log(windowWidth/2);
-  //   // if (locationX <windowWidth/2 && locationX> windowWidth/2) {
-  //     if (Math.abs(locationX - windowWidth / 2) < 20) {
-  //     // User clicked on the left side
-  //     console.log("zabtaaa")
-  //     setScore(score + 50);
-  //   }
-  //   if (locationX < windowWidth/2) {
-  //     // User clicked on the left side
-  //     console.log("less")
-  //     setScore(score + 50);
-  //   }
-  //   else if (locationX >  windowWidth/2) {
-  //     // User clicked on the left side
-  //     console.log("high")
-  //     setScore(score + 50);
-  //   }
-  //   // else if (locationX <windowWidth/2 && locationX> windowWidth/2) {
-  //   //   // User clicked on the left side
-  //   //   console.log("zabtaaa")
-  //   //   setScore(score + 50);
-  //   // } 
-  // };
-
-  // <>
-      //  <TouchableOpacity style={{height:'100%', width:'100%', position:'absolute',top:0,left:0}}
-      //     onPress={handlePress}>
-      //       <View style={styles.circleContainer}>
-      //       <View style={styles.circle}>
-      //    </View>
-      //       </View>
-      //   </TouchableOpacity>
-      // </>
+export default MiniGame4Right;

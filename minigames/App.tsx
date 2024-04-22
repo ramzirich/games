@@ -15,6 +15,7 @@ import MiniGame2 from './src/pages/MiniGame2';
 import Instructions from './src/reusable/Instructions';
 import MiniGame1 from './src/pages/MainGame1';
 import DemoGame1 from './src/pages/DemoGame1';
+import MiniGame4Right from './src/pages/MiniGame4Right';
 
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
       <Stack.Screen name="game1" component={MiniGame1} options={{ headerShown: false }} /> 
       <Stack.Screen name="intruction" component={Instructions} options={{ headerShown: false }} />  
       <Stack.Screen name="demo1" component={DemoGame1} options={{ headerShown: false }} />  
-      {/* <Stack.Screen name="score" component={Score} options={{ headerShown: false }} />  */}
+      <Stack.Screen name="game4Right" component={MiniGame4Right} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   )
